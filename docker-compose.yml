@@ -1,0 +1,11 @@
+services:
+ 
+ my_fastapi:
+    build:
+
+      dockerfile: Dockerfile
+     # We are using ports 8000 both on host and on the server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ".:${CWD:-/code}"
